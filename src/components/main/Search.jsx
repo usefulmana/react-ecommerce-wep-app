@@ -17,7 +17,7 @@ export default class Search extends Component {
     fetch(url)
       .then(res => res.json())
       .then(json => {
-        let data = json.filter(d => (d._id && d.name));
+        let data = json.filter(d => (d._id && d.name && d.price && d.productType));
         this.setState({ products: data });
       });
   }

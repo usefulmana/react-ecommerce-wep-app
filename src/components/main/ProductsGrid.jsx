@@ -29,7 +29,7 @@ export default class ProductsGrid extends Component {
       fetch(url)
         .then(res => res.json())
         .then(json => {
-          let data = json.filter(d => d._id !== "");
+          let data = json.filter(d => d._id && d.name && d.price && d.productType);
           this.setState({ product: data });
         });
     } else {
@@ -38,7 +38,7 @@ export default class ProductsGrid extends Component {
       )
         .then(res => res.json())
         .then(json => {
-          let data = json.filter(d => d._id !== "");
+          let data = json.filter(d => d._id && d.name && d.price && d.productType);
           this.setState({ product: data });
         });
     }
@@ -51,7 +51,7 @@ export default class ProductsGrid extends Component {
     fetch(url)
       .then(res => res.json())
       .then(json => {
-        let data = json.filter(d => d._id !== "" && d.productType !=='' && d.price!=='');
+        let data = json.filter(d => d._id && d.name && d.price && d.productType);
         this.setState({ product: data });
       });
   }
@@ -59,7 +59,7 @@ export default class ProductsGrid extends Component {
     fetch("http://rmit.chickenkiller.com:8080/productTypes")
       .then(res => res.json())
       .then(json => {
-        let data = json.filter(d => d._id !== "" &&d.name);
+        let data = json.filter(d => d._id  &&d.name);
         this.setState({ productTypes: data })});
   }
   componentDidMount() {

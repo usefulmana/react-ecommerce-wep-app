@@ -33,9 +33,9 @@ export default class Footer extends Component {
                                 <a href="https://goo.gl/maps/ynVYqmfFQs22">
                                     {" "}
                                     <p className="text-muted">
-                                        72 Le Thanh Ton, Ben Nghe Ward, District 1, Ho Chi Minh
+                                        72 Le Thanh Ton, District 1, Ho Chi Minh
                                         City, Vietnam
-                    </p>
+                                </p>
                                 </a>
                             </div>
                         </div>
